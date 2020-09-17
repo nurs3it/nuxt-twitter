@@ -1,0 +1,18 @@
+.app {
+  background: #f2f2f2;
+  &__menu {
+    height: 60px;
+    display: flex;
+    .menu-wrappers {
+      align-items: center;
+      display: flex;
+      width: 50%;
+    }
+    &__left-block {
+      justify-content: flex-start;
+    }
+    &__right-block {
+      justify-content: flex-end;
+    }
+  }
+}
