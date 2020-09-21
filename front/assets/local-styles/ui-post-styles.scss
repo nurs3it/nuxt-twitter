@@ -1,0 +1,22 @@
+@import "assets/global-styles/vars";
+.ui-post {
+  display: flex;
+  border-bottom: .5px solid $outlineColor;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  &__profile-icon {
+    width: 60px;
+    height: 60px;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+  }
+  &__post {
+    display: flex;
+    flex-direction: column;
+    &__login {
+      margin-bottom: 15px;
+    }
+  }
+}
+

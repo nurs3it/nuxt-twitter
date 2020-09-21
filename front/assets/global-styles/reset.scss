@@ -14,9 +14,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  font-family: 'Open Sans', sans-serif;
 }
 // HTML5 display-role reset for older browsers
 article, aside, details, figcaption, figure,
@@ -24,7 +22,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
-  line-height: 1;
   background: rgb(240, 240, 240);
 }
 ol, ul {
@@ -37,8 +34,4 @@ blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
