@@ -9,6 +9,11 @@
       <div class="ui-post__post__desc ui-normal-text">
         Вышла PostCSS 8.0 «Президент Осе»: новый API, более быстрый и надёжный парсер, поддержка TypeScript, новый сайт с документацией и другие изменения
       </div>
+      <div class="ui-post__post__action">
+        <i class="material-icons mr-10 md-24 cursor-pointer">thumb_up</i>
+        <i class="material-icons mr-10 md-24 cursor-pointer">send</i>
+        <i class="material-icons mr-10 md-24 cursor-pointer">mode_comment</i>
+      </div>
     </div>
   </div>
 </template>
