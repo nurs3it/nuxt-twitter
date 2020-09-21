@@ -1,20 +1,31 @@
 <template>
   <div class="app">
-    <div class="app__menu">
-      <div class="app__menu__left-block menu-wrappers">
-        <div class="app__menu__icon">ICON</div>
-        <div class="app__menu__search-input"><input type="text"></div>
-        <div class="app__menu__add-btn"><button>Новая запись</button></div>
-      </div>
-      <div class="app__menu__right-block menu-wrappers"></div>
+    <div class="app__menu" @click="changeStateSidebar">
     </div>
-    <div class="app__content">
-      <Nuxt/>
+    <div class="app__main">
+      <div class="app__main__sidebar-menu" :class="{'active-left-sidebar': sidebar.left}"></div>
+      <div class="app__main__content">
+        <Nuxt/>
+      </div>
+      <div class="app__main__right-sidebar-menu" :class="{'active-right-sidebar': sidebar.right}"></div>
     </div>
   </div>
 </template>
 
-<style lang="scss">
-@import "assets/global-styles/reset";
-@import "assets/global-styles/main";
-</style>
+<script>
+export default {
+  data() {
+    return {
+      sidebar: {
+        left: true,
+        right: true
+      }
+    }
+  },
+  methods: {
+    changeStateSidebar() {
+      this.sidebar.right = !this.sidebar.right
+    }
+  },
+}
+</script>
