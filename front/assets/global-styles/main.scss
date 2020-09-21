@@ -4,18 +4,23 @@
   height: 100%;
   display: flex;
   justify-content: center;
-
+  position: relative;
   &__menu {
     height: 100vh;
     width: 300px;
-    border-right: .5px solid $outlineColor;
+    position: relative;
+    .menu-layout {
+      position: fixed;
+      top: 0;
+    }
   }
 
   &__content {
     width: 600px;
     display: flex;
     flex-direction: column;
-
+    border-right: .5px solid $outlineColor;
+    border-left: .5px solid $outlineColor;
     &__title {
       height: 40px;
       border-bottom: .5px solid $outlineColor;
@@ -32,7 +37,11 @@
   &__recommended {
     height: 100vh;
     width: 300px;
-    border-left: .5px solid $outlineColor;
+    position: relative;
+    .recommended-layout {
+      position: fixed;
+      top: 0;
+    }
   }
 }
 

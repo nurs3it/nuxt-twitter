@@ -1,7 +1,9 @@
 <template>
   <div class="app">
     <div class="app__menu">
-      <sidebar />
+      <div class="menu-layout">
+        <sidebar />
+      </div>
     </div>
     <div class="app__content">
       <div class="app__content__title">
@@ -11,7 +13,11 @@
         <Nuxt />
       </div>
     </div>
-    <div class="app__recommended"></div>
+    <div class="app__recommended">
+      <div class="recommended-layout">
+        app__recommended
+      </div>
+    </div>
   </div>
 </template>
 
