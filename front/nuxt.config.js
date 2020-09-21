@@ -22,6 +22,5 @@ module.exports = {
   modules: [
     '@nuxtjs/axios'
   ],
-  axios: {},
   build: {}
 }

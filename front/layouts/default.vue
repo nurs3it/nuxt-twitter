@@ -7,7 +7,7 @@
     </div>
     <div class="app__content">
       <div class="app__content__title">
-        <p class="ui-subtitle">Главная</p>
+        <p class="ui-subtitle pl-10 pr-10">Главная</p>
       </div>
       <div class="app__content__main">
         <Nuxt />
@@ -24,7 +24,16 @@
 <script>
 // TODO: Список Менюшек: Рекомендуемые люди, Новости(Главная)
 import Sidebar from "@/components/Sidebar";
+import API from "../API/api.services"
 export default {
-  components: {Sidebar}
+  components: {Sidebar},
+  data() {
+    return {
+      API: API
+    }
+  },
+  created() {
+    console.log(API.posts.getAll());
+  }
 }
 </script>
