@@ -1,9 +1,13 @@
 @import "assets/global-styles/vars";
 .ui-post {
-  display: flex;
   border-bottom: .5px solid $outlineColor;
-  padding-bottom: 15px;
-  padding-top: 15px;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  padding: 15px;
+  &:hover {
+    background: $outlineColor;
+  }
   &__profile-icon {
     width: 60px;
     height: 60px;
@@ -16,9 +20,29 @@
     flex-direction: column;
     &__login {
       margin-bottom: 15px;
+      transition: .2s ease-in-out;
+      &:hover {
+        color: $accentColor;
+      }
     }
     &__desc {
-      margin-bottom: 15px;
+      margin-bottom: 25px;
+    }
+    &__action {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .line-clamp {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      box-orient: vertical;
     }
   }
 }

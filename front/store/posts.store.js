@@ -1,22 +1,31 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import axios from "axios"
+import API from "@/API/api.services"
 Vue.use(Vuex)
 
-const posts = () =>
-  new Vuex.Store({
-    state: {
-      allPost: []
-    },
-    mutations: {
-      SET_ALL_POST(state, payload) {
-        state.allPost = payload;
-      }
-    },
-    actions: {
-      getAllPost: (state) => {}
-    },
-    getters: {}
-  })
+export const state = () => ({
+  allPost: []
+})
 
-export default posts;
+export const mutations = {
+  SET_ALL_POST(state, payload) {
+    state.allPost = payload;
+  }
+}
+
+export const actions = {
+  async getAllPost({commit}) {
+    API.posts.getAll().then(r => {
+      if (r && r.data) {
+        commit("SET_ALL_POST", r.data);
+      }
+    })
+  }
+}
+
+export const getters = {
+  sortedPosts: (state) => {
+    return state.allPost.sort((a, b) => b.id - a.id)
+  }
+}

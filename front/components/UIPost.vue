@@ -1,18 +1,17 @@
 <template>
-  <div class="ui-post">
-    <div class="ui-post__profile-icon">
+  <div class="ui-post" @click="showPost">
+    <div class="ui-post__profile-icon" @click.stop="showUser">
       <i class="material-icons mr-10 md-48 cursor-pointer">face</i>
     </div>
     <div class="ui-post__post">
-      <div class="ui-post__post__title ui-subtitle">Title</div>
-      <div class="ui-post__post__login ui-small-text">@web_dev</div>
-      <div class="ui-post__post__desc ui-normal-text">
-        Вышла PostCSS 8.0 «Президент Осе»: новый API, более быстрый и надёжный парсер, поддержка TypeScript, новый сайт с документацией и другие изменения
-      </div>
+      <p class="ui-post__post__title ui-large-text"><b>{{ this.post.title }}</b></p>
+      <p @click.stop="showUser" class="ui-post__post__login ui-small-text">{{ `@${this.user.username}` }}</p>
+      <p class="ui-post__post__desc ui-normal-text" :class="{'line-clamp': isIndex}">{{ this.post.body }}</p>
       <div class="ui-post__post__action">
-        <i class="material-icons mr-10 md-24 cursor-pointer">thumb_up</i>
-        <i class="material-icons mr-10 md-24 cursor-pointer">send</i>
-        <i class="material-icons mr-10 md-24 cursor-pointer">mode_comment</i>
+        <i @click.stop="likeIt" class="material-icons mr-10 md-24 cursor-pointer">thumb_up</i>
+        <i @click.stop="sendIt" class="material-icons mr-10 md-24 cursor-pointer">send</i>
+        <i @click.stop="showComment" v-if="isIndex" class="material-icons mr-10 md-24 cursor-pointer">comment</i>
+        <i @click.stop="saveIt" class="material-icons mr-10 md-24 cursor-pointer">turned_in_not</i>
       </div>
     </div>
   </div>
@@ -20,7 +19,43 @@
 
 <script>
 export default {
-name: "UIPost"
+  name: "UIPost",
+  props: ["post", "user"],
+  computed: {
+    isIndex() {
+      return this.$route.name === 'index';
+    }
+  },
+  methods: {
+    showPost() {
+      this.$router.push({
+        name: "postId",
+        params: {
+          postId: this.post.id
+        }
+      })
+    },
+    showUser() {
+      this.$router.push({
+        name: "users-userId",
+        params: {
+          userId: this.post.userId
+        }
+      })
+    },
+    likeIt() {
+      console.log('likeIt')
+    },
+    sendIt() {
+      console.log('sendIt')
+    },
+    showComment() {
+      console.log('showComment')
+    },
+    saveIt() {
+      console.log('saveIt')
+    },
+  },
 }
 </script>
 
