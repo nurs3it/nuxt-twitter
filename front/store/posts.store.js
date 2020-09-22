@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from "axios"
 import API from "@/API/api.services"
+
 Vue.use(Vuex)
 
 export const state = () => ({

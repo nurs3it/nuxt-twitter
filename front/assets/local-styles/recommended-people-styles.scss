@@ -5,18 +5,23 @@
     border-bottom: 5px solid $accentColor;
   }
   &__list {
-    padding: 10px;
     &__item {
-      padding: 10px;
       display: flex;
+      cursor: pointer;
       width: 100%;
+      transition: .2s ease-in-out;
+      &:hover {
+        background: $activeStrokeColor;
+      }
       &__icon {
+        padding: 10px;
         display: flex;
         justify-content: center;
         width: 50px;
         flex: 0 auto;
       }
       &__info {
+        padding: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
