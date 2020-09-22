@@ -42,5 +42,10 @@ export default {
     getPhotos(albumId) {
       return axios.get(url + '/albums/' + albumId + '/photos')
     }
+  },
+  comment: {
+    getCommentsByPostId(postId) {
+      return axios.get(url + '/posts/' + postId + '/comments')
+    }
   }
 }

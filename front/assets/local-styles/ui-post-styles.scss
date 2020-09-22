@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     &__login {
-      margin-bottom: 15px;
+      margin-bottom: 5px;
       transition: .2s ease-in-out;
       &:hover {
         color: $accentColor;
@@ -32,6 +32,24 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+      .action-like {
+        transition: .2s ease-in-out;
+        &:hover {
+          color: purple;
+        }
+      }
+      .action-send {
+        transition: .2s ease-in-out;
+        &:hover {
+          color: #2F3B57;
+        }
+      }
+      .action-comment {
+        transition: .2s ease-in-out;
+        &:hover {
+          color: darkgreen;
+        }
+      }
     }
     .line-clamp {
       overflow: hidden;

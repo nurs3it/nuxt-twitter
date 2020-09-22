@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div class="recommended-people"></div>
 </template>
 
 <script>

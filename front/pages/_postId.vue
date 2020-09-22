@@ -1,6 +1,7 @@
 <template>
   <div>
     <u-i-post :post="post" :user="findUserByUserId()" v-if="post && post.userId"/>
+    <comment :postId="postId" />
   </div>
 </template>
 
@@ -8,10 +9,11 @@
 import API from "../API/api.services"
 import UIPost from "@/components/UIPost";
 import {mapGetters} from "vuex";
+import Comment from "@/components/Comment";
 
 export default {
   name: "_postId",
-  components: {UIPost},
+  components: {Comment, UIPost},
   data() {
     return {
       API,
@@ -37,6 +39,5 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
 </style>
