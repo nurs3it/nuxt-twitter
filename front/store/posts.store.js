@@ -25,7 +25,7 @@ export const actions = {
 }
 
 export const getters = {
-  sortedPosts: (state) => {
+  sortedPosts (state) {
     return state.allPost.sort((a, b) => b.id - a.id)
   }
 }

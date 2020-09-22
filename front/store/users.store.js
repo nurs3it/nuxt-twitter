@@ -10,7 +10,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  SET_ALL_USER (state, payload) {
+  SET_ALL_USER(state, payload) {
     state.allUsers = payload;
   }
 }
@@ -26,7 +26,7 @@ export const actions = {
 }
 
 export const getters = {
-  sortedUsers: (state) => {
+  sortedUsers(state) {
     return state.allUsers;
   }
 }

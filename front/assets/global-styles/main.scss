@@ -29,7 +29,8 @@
       display: flex;
       align-items: center;
       position: fixed;
-      background: rgb(240, 240, 240);
+      background: rgb(240, 240, 240)!important;
+      z-index: 10;
       .arrow-back {
         width: 50px;
         text-align: center;
