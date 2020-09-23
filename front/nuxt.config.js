@@ -14,7 +14,8 @@ module.exports = {
   },
   css: [
     {src: '@/assets/global-styles/main.scss', lang: 'scss'},
-    {src: '@/assets/global-styles/reset.scss', lang: 'scss'}
+    {src: '@/assets/global-styles/reset.scss', lang: 'scss'},
+    {src: '@/assets/global-styles/_fonts.scss', lang: 'scss'},
   ],
   plugins: [],
   components: true,
