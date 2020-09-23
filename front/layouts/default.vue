@@ -16,7 +16,7 @@
     </div>
     <div class="app__recommended">
       <div class="recommended-layout">
-        app__recommended
+        <search-component />
       </div>
     </div>
   </div>
@@ -26,9 +26,10 @@
 // TODO: Список Менюшек: Рекомендуемые люди, Новости(Главная)
 import Sidebar from "@/components/Sidebar";
 import API from "../API/api.services"
+import SearchComponent from "@/components/SearchComponent";
 
 export default {
-  components: {Sidebar},
+  components: {SearchComponent, Sidebar},
   data() {
     return {
       API: API
@@ -37,6 +38,7 @@ export default {
   created() {
     this.$store.dispatch('posts.store/getAllPost')
     this.$store.dispatch('users.store/getAllUser')
+    this.$store.dispatch('albums.store/getAllAlbums')
   },
   methods: {
     goBack() {

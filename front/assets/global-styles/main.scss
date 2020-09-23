@@ -47,8 +47,10 @@
     width: 300px;
     position: relative;
     .recommended-layout {
+      width: 300px;
       position: fixed;
       top: 0;
+      padding: 10px;
     }
   }
 }
