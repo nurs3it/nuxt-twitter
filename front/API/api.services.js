@@ -39,6 +39,9 @@ export default {
     }
   },
   albums: {
+    getAll() {
+      return axios.get(url + '/albums/')
+    },
     getPhotos(albumId) {
       return axios.get(url + '/albums/' + albumId + '/photos')
     }
