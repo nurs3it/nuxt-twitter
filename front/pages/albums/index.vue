@@ -54,10 +54,10 @@ export default {
       });
     },
     sortByAlph() {
-
+      this.filteredAlbums = this.filteredAlbums.sort((a, b) => a.title.localeCompare(b.title))
     },
     softById() {
-
+      this.filteredAlbums = this.filteredAlbums.sort((a, b) => b.id - a.id)
     }
   },
 }
