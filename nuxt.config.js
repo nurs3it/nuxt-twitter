@@ -22,5 +22,3 @@ export default {
     '@nuxtjs/axios'
   ],
 }
-
-// Test Heroku

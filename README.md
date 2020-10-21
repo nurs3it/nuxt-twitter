@@ -2,6 +2,8 @@
 
 ## Build Setup
 
+[nuxt-twitter.herokuapp.com](nuxt-twitter.herokuapp.com)
+
 ```bash
 # install dependencies
 $ npm install
