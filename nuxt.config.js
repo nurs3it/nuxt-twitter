@@ -1,5 +1,5 @@
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
   target: 'server',
   head: {
     title: process.env.npm_package_name || '',
