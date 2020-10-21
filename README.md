@@ -1,5 +1,3 @@
-# rocket-firm-nuxt-app
-
 ## Build Setup
 
 ```bash
