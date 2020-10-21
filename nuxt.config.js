@@ -1,5 +1,5 @@
-module.exports = {
-  mode: 'spa',
+export default {
+  mode: 'universal',
   target: 'server',
   head: {
     title: process.env.npm_package_name || '',
@@ -17,11 +17,8 @@ module.exports = {
     {src: '@/assets/global-styles/reset.scss', lang: 'scss'},
     {src: '@/assets/global-styles/_fonts.scss', lang: 'scss'},
   ],
-  plugins: [],
   components: true,
-  buildModules: [],
   modules: [
     '@nuxtjs/axios'
   ],
-  build: {}
 }
