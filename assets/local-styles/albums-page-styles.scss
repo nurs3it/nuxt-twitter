@@ -1,0 +1,26 @@
+@import "../global-styles/vars";
+.albums-page {
+  &__title {
+    padding: 10px;
+    border-bottom: 5px solid $accentColor;
+  }
+  &__filter {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    .filter-icon {
+      padding: 5px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      transition: .2s ease-in-out;
+      &:hover {
+        background: $outlineColor;
+      }
+    }
+  }
+}

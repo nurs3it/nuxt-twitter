@@ -1,0 +1,189 @@
+@import "vars";
+
+h1 {
+  font-size: 82px;
+  line-height: 82px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  font-family: $boldFont;
+}
+
+h2 {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 76px;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  font-family: $semiBoldFont;
+}
+
+h3 {
+  font-size: 42px;
+  line-height: 57px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: $regularFont;
+}
+
+h4 {
+  font-size: 34px;
+  line-height: 46px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: $regularFont;
+}
+
+h5 {
+  font-size: 26px;
+  line-height: 35px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: $regularFont;
+}
+
+.ui-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+  font-style: normal;
+  font-family: $semiBoldFont;
+}
+
+.ui-large-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: $regularFont;
+}
+
+.ui-normal-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $regularFont;
+}
+
+.ui-small-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: $regularFont;
+}
+
+.ui-caption-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  font-family: $regularFont;
+}
+
+.ui-button-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration-color: $secondaryColor;
+  text-decoration-width: 0.5px;
+  transition: .3s ease-in-out;
+  text-decoration: underline;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 24px;
+}
+
+a:hover {
+  text-decoration-color: transparent;
+  background: $accentColor;
+  cursor: pointer;
+  color: white;
+}
+
+a:active {
+  text-decoration: none;
+  color: $accentColor;
+}
+
+.ui-button {
+  font-family: $regularFont;
+  border-radius: 100px;
+  height: 50px;
+  background: #339FEF;
+  width: max-content;
+  border: 0 solid;
+  min-width: 200px;
+  cursor: pointer;
+  padding: 14px;
+  color: white;
+
+  position: relative;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  z-index: 2;
+}
+
+.ui-button:disabled {
+  background: #DCDBDB;
+  color: $secondaryColor;
+}
+
+.ui-button:disabled:after {
+  left: -100%!important;
+}
+
+.rectangular-button {
+  border-radius: 5px;
+}
+
+.small-button {
+  height: 40px;
+  padding: 7px;
+}
+
+.ui-button:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #3D42D6 0%, #32A0EF 100%);
+  top: 0;
+  left: -100%;
+  transition: .3s ease-in-out;
+  z-index: -1;
+}
+
+.ui-button:hover:after {
+  left: 0;
+}
+
+button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.ui-input {
+  padding: 10px;
+  min-width: 220px;
+  border: 0;
+  color: $accentColor;
+  caret-color: $accentColor;
+  transition: .2s ease-in-out;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(168,168,168,0.3);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(168,168,168,0.3);
+  box-shadow: 0px 3px 5px 0px rgba(168,168,168,0.3);
+}
+
+input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+

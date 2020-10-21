@@ -1,0 +1,39 @@
+@import "assets/global-styles/vars";
+.sidebar {
+  &__icon {
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: $accentColor;
+  }
+  &__routes {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    &__item {
+      text-decoration: none;
+      color: #2F3B57;
+      margin-bottom: 10px;
+      padding: 11px;
+      border-radius: 10px;
+      border: .5px solid transparent;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background: $outlineColor;
+      }
+    }
+    .nuxt-link-exact-active {
+      border: .5px solid $accentColor;
+      color: $accentColor;
+    }
+  }
+  &__new-post {
+    padding: 10px;
+    button {
+      width: 100%;
+    }
+  }
+}
